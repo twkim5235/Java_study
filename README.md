@@ -86,3 +86,51 @@ JVM은 'Java virtual machine'을 줄인 것으로 직역하면 '자바를 실행
 <img src="./img/2.JPEG" style="zoom:33%;" />
 
 그래서 썬에서는 일반적으로 많이 사용되는 주요 OS용 JVM을 제공하고 있고, 자바의 중요한 장점 중 하나인 "Write once, run anywhere(한 번 작성하면 어디서든 실행된다.)"이 가능하게 되는 것이다.
+
+
+
+## Ch2는 JDK 설치 과정은 생략하고 주요 프로그램만 기록
+
+- javac.exe: 자바 컴파일러이며, 자바 소스코드를 바이트코드로 컴파일한다.
+- java.exe: 자바 인터프리터이며, 컴파일러가 생성한 바이트코드(클래스 파일)를 해석하고 실행한다.
+- javap.exe: 역어셈블러, 컴파일된 클래스파일을 원래의 소스코드로 변환한다.
+
+- javadoc.exe: 자동 문서 생성기, 소스파일에 있는 주석을 이용하여 Java API문서와 같은 형식의 문서를 자동으로 생성한다.
+
+- jar.exe: 압축프로그램, 클래스파일과 프로그램의 실행에 관련된 파일을 하나의 jar파일(.jar)로 압축하거나 압축해제한다.
+
+  > 참고 JDK와 JRE
+  >
+  > JDK - 자바 개발도구(Java Development Kit)
+  >
+  > JRE - 자바 실행환경(Java Runtime Environment) 자바로 작성된 응용프로그램이 실행되기 위한 최소 환경
+  >
+  > JDK = JRE + 개발에 필요한 실행파일 (javac.exe 등)
+  >
+  > JRE = JVM + 클래스 라이브러리(Java API)
+
+
+
+## 3. 자바로 프로그램 작성하기
+
+### 3.1 Hello.java
+
+~~~java
+package ch1;
+
+public class Hello {
+
+  public static void main(String[] args) {
+    System.out.println("Hello, World");
+  }
+}
+
+~~~
+
+위 예제를 실행하려면, 먼저 자바컴파일러(javac)를 사용해서 소스파일(Hello.java)로부터 클래스파일(Hello.class)을 생성해야 한다. 그 다음 자바 인터프리터(java.exe)로 실행한다.
+
+~~~
+Hello.java 작성 -> Hello.class 생성 -> "Hellow World"출력
+					  javac 컴파일     java(인터프리터) 실행
+~~~
+
