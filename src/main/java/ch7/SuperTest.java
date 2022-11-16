@@ -17,11 +17,15 @@ class Parent {
   protected void hello() {
     System.out.println("hello");
   }
+
+  public int getX() {
+    return x;
+  }
 }
 
 class Child extends Parent {
 
-  int x = 10;
+  int x = 20;
 
   void method() {
     x = 20;
@@ -34,5 +38,10 @@ class Child extends Parent {
   public void hello() {
     super.hello();
     System.out.println("hello world");
+  }
+
+  @Override
+  public int getX() {
+    return x;
   }
 }
